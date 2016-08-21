@@ -1,0 +1,152 @@
+body {
+	margin: 10px;
+	padding: 10px;
+	font-family: Arial, Verdana, Sans-Serif;
+	font-size: 12px;	 
+	align: center;
+	background-color: black;
+}
+
+ 
+.header {	
+	 vertical-align:middle;
+	 color: yellow;
+	 font-size: 24pt;
+	 width: 100%;
+	 	  
+}
+
+#footer {	
+	 vertical-align:bottom;
+}
+
+ .iconArrowGreen {
+	float: left;
+    background: url('../images/iconArrowGreen.jpg') no-repeat;
+	width: 10px;
+	height: 9px;
+	margin: 3px 3px 0px 0px;	
+}
+
+.italic {
+	font-size: 11px;
+	font-style: italic;
+}
+
+.italic12Blue {
+	font-size: 12px;
+	font-style: italic;
+	color: #4A5CA5;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.normal {
+	font-size: 12px;
+	font-weight: normal;	
+}
+
+.notification {
+	font-size: 12px;
+	font-weight: normal;
+	font-style: italic;
+	color: #3E4E92;
+}
+
+.title {
+	font-family: Arial, Verdana, Sans-Serif;
+	font-size: 40px;
+	color: #4A5CA5;	
+	font-weight: bold;
+	text-decoration: none;
+	background: url('../images/underline.gif') repeat-x; 
+	background-position: 100% 100%;
+	padding: 0px 0px 2px 0px;
+}
+
+
+ 
+
+
+a:link {
+	font-family: Arial, Verdana, Sans-Serif;
+	font-size: 12px;
+	color: #0574B1;	
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+a:visited {
+	font-family: Arial, Verdana, Sans-Serif;
+	font-size: 12px;
+	color: #81579F;	
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+a:hover {
+	font-family: Arial, Verdana, Sans-Serif;
+	font-size: 12px;
+	color: #0574B1;	
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+a:active {
+	font-family: Arial, Verdana, Sans-Serif;
+	font-size: 13px;
+	color: #0574B1;	
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+a.mainLink:link {
+	font-family: Arial, Verdana, Sans-Serif;
+	font-size: 13px;
+	color: #0574B1;	
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+a.mainLink:visited {
+	font-family: Arial, Verdana, Sans-Serif;
+	font-size: 13px;
+	color: #81579F;	
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+a.mainLink:hover {
+	font-family: Arial, Verdana, Sans-Serif;
+	font-size: 13px;
+	color: #0574B1;	
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+a.mainLink:active {
+	font-family: Arial, Verdana, Sans-Serif;
+	font-size: 13px;
+	color: #0574B1;	
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+
+
+
+table {
+	border: 0px solid #96B1CB;
+	border-collapse: collapse;
+}
+ 
+
+table td {	
+	background-color: #FFFFFF;
+	border: 0px solid #96B1CB;
+	font-weight: normal;
+	padding: 4px 4px 4px 4px;
+	color: #424242;
+}

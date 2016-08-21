@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+				http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
+				http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+	
+
+	<import resource="database.xml" />
+	<import resource="cache.xml" />
+	<import resource="handlers.xml" />
+	
+	<!-- <import resource="quartz.xml" /> -->
+	<import resource="services.xml" />
+	
+	
+	<bean id="dataEngineHandlerFactory" class="com.zane.generic.handler.HandlerFactory"
+		scope="singleton">
+		<property name="defaultHandler" value="search" />
+		<property name="handlers">
+			<map>
+				<entry key="yahoo">
+					<value>yahooHistoricalHandler</value>
+				</entry>
+				<entry key="as">
+					<value>autoSuggestHandler</value>
+				</entry>
+ 			</map>
+		</property>
+	</bean>
+
+
+</beans>

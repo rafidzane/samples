@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+				http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
+				http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+	
+	 <bean id="autoSuggestService" class="com.zane.generic.service.GenericAutoSuggestService"
+		scope="singleton">
+		<property name="autoSuggests">
+			<map>
+				<entry key="SYMBOL" value-ref="SymbolAutoSuggestMetaData" />
+			</map>
+		</property>
+	</bean>
+	
+	<bean id="SymbolAutoSuggestMetaData" class="com.zane.generic.service.obj.FileAutoSuggestMetaData">
+		<property name="name" value="SYMBOL" />
+		<property name="description" value="SymbolAutoSuggest" /> 
+		<property name="dao" ref="flatFileInformationDAO" />
+		<property name="fileLocation" value="/Users/rafidz/Documents/workspaceIndigo/DataServiceEngine/data/valid/NYSE.txt" />
+		<property name="delimiter" value="|" /> 
+		<property name="updateInterval" value="3" />
+		<property name="replaceSpecialCharacters" value="true" />
+	</bean>
+</beans>

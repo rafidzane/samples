@@ -1,0 +1,426 @@
+body {
+	margin: 10px;
+	padding: 10px;
+	font-family: Arial, Verdana, Sans-Serif;
+	font-size: 12px;	
+	color: #FFF000;	
+	align: center;
+}
+ 
+#appLogo {
+	float: left;
+	background: url('../images/appLogo_reportingSQLRunner.jpg') no-repeat;
+	width: 620px;
+	height: 70px;
+}
+
+#topBannerLinks {
+	position: absolute;
+	right: 0px;
+}
+
+#helpCenter {
+	float: left;
+	background: url('../images/helpCenter.jpg') no-repeat;
+	width: 85px;
+	height: 24px;
+	padding-right: 25px;
+	display: inline;
+	cursor: pointer;	
+}
+
+#closeApplication {
+	float: left;
+	background: url('../images/closeApplication.jpg') no-repeat;
+	width: 112px;
+	height: 24px;
+	padding-right: 25px;
+	display: inline;
+	cursor: pointer;
+}
+
+#contentContainer {
+	float: left;	
+	width: 80%;
+	margin: 15px 0px 25px 0px;
+	padding: 0px;
+}
+
+
+
+/*  Start Search here */
+#searchRow {
+	float: left;
+	width: 100%;
+}
+
+/*  Start Nav here */
+#navContainer {
+	float: left;
+	margin: 0px 0px 15px 15px;	
+	padding: 0px 0px 0px 0px;
+}
+
+#greetingContainer {
+	float: right;	
+	height: 61px;
+	padding: 0px 15px 0px 0px;
+	font-family: Arial, Verdana, Sans-Serif;
+	font-size: 12px;	
+	color: #5C5C5C;
+	height: 61px;	
+	margin: 0px;
+}
+
+#searchContainer {
+	float: left;	
+	background: url('../images/searchBoxBg.jpg') repeat-x;	
+	background-color: #FFFFFF;
+	border: 1px solid #96B1CB; 
+	min-width: 500px;
+	height: 70px;
+	margin: -20px 0px 55px 15px;	
+}
+
+/* for IE only */
+* html #searchContainer {
+	float: left;	
+	background: url('../images/searchBoxBg.jpg') repeat-x;	
+	background-color: #FFFFFF;
+	border: 1px solid #96B1CB; 
+	min-width: 500px;
+	height: 70px;
+	margin-left: 10px;
+	margin: -20px 0px 55px 15px;	
+}
+
+#searchContainerContent {
+	float: left;
+	font-family: Arial, Verdana, Sans-Serif;
+	font-size: 12px;	
+	color: #424242;	
+}
+
+#searchNotes {
+	width: 650px;
+	height: 15px;
+	padding: 12px 0px 0px 20px;	
+}
+
+#searchLabel {
+	float: left;
+	color: #3E4E92;
+	padding: 12px 0px 0px 20px;	
+}
+
+#searchLabel2 {
+	float: left;
+	color: #3E4E92;
+	padding: 12px 0px 0px 10px;	
+}
+
+#searchInput {
+	float: left;
+	font-family: Arial, Verdana, Sans-Serif;
+	font-size: 12px;
+	color: #424242;	
+	padding: 9px 0px 0px 5px;
+}
+
+.searchInputTextBox {
+	float: left;
+	width: 500px;
+	font-family: Arial, Verdana, Sans-Serif;
+	font-size: 12px;
+	color: #424242;	
+}
+
+.searchInputBrowse{
+	float: left;
+	width: 360px;
+	height: 22px;
+	line-height: 17px;
+	font-family: Arial, Verdana, Sans-Serif;
+	font-size: 12px;
+	color: #424242;	
+}
+
+#searchBtn {
+	float: left;	
+	padding: 8px 20px 0px 6px;
+}
+
+#fiduciaryContainer {
+	display: block;
+}
+
+
+
+/*  Start Greeting here */
+
+#greeting {
+	float: left;
+	text-align: right;
+}
+
+#iconUser {
+	float: left;
+    background: url('../images/iconPerson.jpg') no-repeat;
+	width: 14px;
+	height: 14px;
+	padding: 0px 5px 0px 0px;
+}
+
+
+
+/*  Start Stats here */
+#bottomBodyContainer {
+	float: left;
+	width: 97%;
+	font-family: Arial, Verdana, Sans-Serif;
+	font-size: 12px;
+	color: #424242;
+	margin: 0px 15px 0px 15px;
+}
+
+/* for IE only */
+*html #bottomBodyContainer {
+	float: left;
+	width: 97%;
+	font-family: Arial, Verdana, Sans-Serif;
+	font-size: 12px;
+	color: #424242;
+	margin: 0px 15px 0px 15px;
+}
+
+
+
+/*  Start Error here */
+#errorBox {
+	float: left;		
+	background-color: #FFFFFF;
+	border: 1px solid #96B1CB; 
+	min-width: 500px;
+	height: 61px;
+	margin-left: 15px;	
+}
+
+/* for IE only */
+* html #errorBox {
+	float: left;	
+	background-color: #FFFFFF;
+	border: 1px solid #96B1CB;  
+	min-width: 500px;
+	height: 61px;
+	margin-left: 10px;	
+}
+
+.iconStatus {
+	position: relative;
+	top: 4px;
+	padding: 0px 2px 0px 0px;
+}
+
+.errorContainer {
+	width: 709px;
+	text-align: left;
+	background-color: #F9FDFF;
+	border: 1px solid #96B1CB;
+	padding: 2px 0px 6px 0px;
+	margin: 0px 15px 15px 15px;
+}
+
+* html .errorContainer {
+	margin: 0px 15px 5px 20px;
+}
+
+.errorMessage {
+	width: 95%;	
+	margin: 0 auto;
+	line-height: 18px;
+	font-style: italic;
+}
+
+.successText {
+	color: #328319;
+}
+
+.errorText {
+	color: #DB2828;
+}
+
+
+
+
+
+
+
+.submitBtn {
+	float: left;    
+    background: url('../images/searchBtnBg.gif');
+	border: none;
+	width: 90px;
+	height: 22px;
+	padding: 0px 25px 0px 25px;
+	font-family: Arial, Verdana, Sans-Serif;
+	font-size: 12px;
+	color: #5A5A5A;	
+	font-weight: bold;
+}
+
+.iconArrowGreen {
+	float: left;
+    background: url('../images/iconArrowGreen.jpg') no-repeat;
+	width: 10px;
+	height: 9px;
+	margin: 3px 3px 0px 0px;	
+}
+
+.italic {
+	font-size: 11px;
+	font-style: italic;
+}
+
+.italic12Blue {
+	font-size: 12px;
+	font-style: italic;
+	color: #4A5CA5;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.normal {
+	font-size: 12px;
+	font-weight: normal;	
+}
+
+.notification {
+	font-size: 12px;
+	font-weight: normal;
+	font-style: italic;
+	color: #3E4E92;
+}
+
+.title {
+	font-family: Arial, Verdana, Sans-Serif;
+	font-size: 40px;
+	color: #4A5CA5;	
+	font-weight: bold;
+	text-decoration: none;
+	background: url('../images/underline.gif') repeat-x; 
+	background-position: 100% 100%;
+	padding: 0px 0px 2px 0px;
+}
+
+.table_none{
+  border: 0px;
+}
+
+.paddingBtmXSmall {
+	margin: 0px 0px 5px 0px;
+}
+
+.titleSpacer {
+	margin: 0px 0px 15px 0px;
+}
+
+.titleSpacer2 {
+	margin: 0px 0px 20px 0px;
+}
+
+
+
+
+
+
+a:link {
+	font-family: Arial, Verdana, Sans-Serif;
+	font-size: 12px;
+	color: #0574B1;	
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+a:visited {
+	font-family: Arial, Verdana, Sans-Serif;
+	font-size: 12px;
+	color: #81579F;	
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+a:hover {
+	font-family: Arial, Verdana, Sans-Serif;
+	font-size: 12px;
+	color: #0574B1;	
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+a:active {
+	font-family: Arial, Verdana, Sans-Serif;
+	font-size: 13px;
+	color: #0574B1;	
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+a.mainLink:link {
+	font-family: Arial, Verdana, Sans-Serif;
+	font-size: 13px;
+	color: #0574B1;	
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+a.mainLink:visited {
+	font-family: Arial, Verdana, Sans-Serif;
+	font-size: 13px;
+	color: #81579F;	
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+a.mainLink:hover {
+	font-family: Arial, Verdana, Sans-Serif;
+	font-size: 13px;
+	color: #0574B1;	
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+a.mainLink:active {
+	font-family: Arial, Verdana, Sans-Serif;
+	font-size: 13px;
+	color: #0574B1;	
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+
+
+
+table {
+	border: 0px solid #96B1CB;
+	border-collapse: collapse;
+}
+
+table th {
+	height: 26px;
+	background: url('../images/searchBoxBg.jpg') repeat-x;	
+	background-color: #FFFFFF;
+	border: 0px solid #96B1CB;
+	font-weight: normal;
+	padding: 2px 0px 0px 0px;
+	color: #3E4E92;
+}
+
+table td {	
+	background-color: #FFFFFF;
+	border: 0px solid #96B1CB;
+	font-weight: normal;
+	padding: 4px 4px 4px 4px;
+	color: #424242;
+}

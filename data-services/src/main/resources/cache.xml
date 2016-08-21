@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+				http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
+				http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+
+  
+ <bean name="dataEngineCache"  class="com.zane.generic.cache.GenericOSCache" scope="singleton">
+     <constructor-arg index="0" type="java.lang.String" value="datacache" />       
+     <constructor-arg type="java.util.Properties" >     
+        <props>
+	     <prop key="cache.persistence.class">com.opensymphony.oscache.plugins.diskpersistence.DiskPersistenceListener</prop>
+	     <prop key="cache.path" >/tmp/DataServiceEngine</prop>
+	     <prop key="cache.memory">false</prop>
+	     <prop key="cache.blocking" >false</prop>
+	     <prop key="cache.capacity">5000</prop>
+	     <prop key="cache.algorithm">com.opensymphony.oscache.base.algorithm.LRUCache</prop>
+	   </props>    	   
+	 </constructor-arg>	
+	 <constructor-arg value="false" />	    
+ </bean>
+ 
+ <bean name="historicalDataCache"  class="com.zane.generic.cache.GenericOSCache" scope="singleton">
+     <constructor-arg index="0" type="java.lang.String" value="datacache" />       
+     <constructor-arg type="java.util.Properties" >     
+        <props>
+	     <prop key="cache.persistence.class">com.opensymphony.oscache.plugins.diskpersistence.DiskPersistenceListener</prop>
+	     <prop key="cache.path" >/tmp/HistoricalData</prop>
+	     <prop key="cache.memory">false</prop>
+	     <prop key="cache.blocking" >false</prop>
+	     <prop key="cache.capacity">5000</prop>
+	     <prop key="cache.algorithm">com.opensymphony.oscache.base.algorithm.LRUCache</prop>
+	   </props>    	   
+	 </constructor-arg>	
+	 <constructor-arg value="false" />	    
+ </bean>
+ 
+  
+  
+  
+</beans>

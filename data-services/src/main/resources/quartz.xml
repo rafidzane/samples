@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+				http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
+				http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+
+
+
+	<bean id="SecurityCacheInvoker" class="com.zane.generic.batch.SecurityCacheInvoker">
+		<property name="securityFileDir" value="C:/Workspaces/workspace35/TestBed/verified/valid" />
+		<property name="securitiesList">
+			<list>
+				<value>NYSE.txt</value>
+			</list>
+		</property>
+
+		<property name="urls">
+			<list>
+				<value><![CDATA[http://www/rafidwahab.com/ds/idal?rh=yahoo&s1=EQTY%5B$SECURITY%5D%3ACLOSE&sdate=01012007&edate=01312009&]]></value>
+			</list>
+		</property>
+
+
+
+
+	</bean>
+
+
+	<bean id="securityInvokerJob"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="SecurityCacheInvoker" />
+		<property name="targetMethod" value="preCacheSecurities" />
+		<property name="concurrent" value="false" />
+	</bean>
+
+
+	<bean id="cronTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="securityInvokerJob" />
+		<property name="cronExpression" value="* 00 23 * * ?" />
+	</bean>
+
+
+	<bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="triggers">
+			<list>
+				<ref bean="cronTrigger" />
+			</list>
+		</property>
+	</bean>
+
+</beans>

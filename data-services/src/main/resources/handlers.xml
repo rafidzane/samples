@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+				http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
+				http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+
+
+
+	<!--  Inteceptors -->
+	<bean id="dateMassageInterceptor"
+		class="com.zane.generic.handler.interceptor.ValueTransformInterceptor"
+		scope="prototype">
+		<property name="universeKey" value="2008052808301597029" />
+		<property name="universeOperator" value="102" />
+	</bean>
+	<bean id="stringArr2StringInterceptor"
+		class="com.zane.generic.handler.interceptor.StringArr2StringFormatInterceptor"
+		scope="prototype" />
+	<bean id="requestParamOutputInterceptor"
+		class="com.zane.generic.handler.interceptor.RequestParamsOutputInterceptor"
+		scope="prototype" />
+	<bean id="debugInterceptor"
+		class="com.zane.generic.handler.interceptor.DebugInterceptor"
+		scope="prototype">
+		<property name="debugValues">
+			<map>
+				<!-- 
+			<entry key="tid"  value="2" />
+			 -->
+			</map>
+		</property>
+	</bean>
+
+
+	<!--  Handlers -->
+
+	<bean id="yahooHistoricalHandler"
+		class="com.zane.generic.handler.YahooHistoricalDataHandler"
+		scope="prototype">
+		<property name="defaultOutputter" value="csv" />
+		<property name="preProcessors">
+			<list>
+				<ref bean="debugInterceptor" />
+				<ref bean="stringArr2StringInterceptor" />
+				<ref bean="requestParamOutputInterceptor" />
+				<ref bean="dateMassageInterceptor" />
+			</list>
+		</property>
+		<property name="outputters">
+			<map>
+				<entry key="csv">
+					<ref bean="historicalDataCSVOutputter" />
+				</entry>
+				<entry key="json">
+					<ref bean="historicalDataJSONOutputter" />
+				</entry>
+			</map>
+		</property>
+	</bean>
+
+	<bean id="historicalDataCSVOutputter"
+		class="com.zane.generic.handler.output.YahooHistoricalOutputter"
+		scope="prototype" />
+	<bean id="historicalDataJSONOutputter"
+		class="com.zane.generic.handler.output.YahooHistoricalJSONOutputter"
+		scope="prototype" />
+
+	<bean id="autoSuggestHandler" class="com.zane.generic.handler.AutoSuggestHandler"
+		scope="singleton">
+		<property name="defaultOutputter" value="json" />
+		<property name="preProcessors">
+			<list>
+				<ref bean="stringArr2StringInterceptor" />
+				<ref bean="requestParamOutputInterceptor" />
+			</list>
+		</property>
+
+		<property name="outputters">
+			<map>
+				<entry key="json">
+					<ref bean="viewJSONOutputter" />
+				</entry>
+			</map>
+		</property>
+	</bean>
+
+	<bean id="viewJSONOutputter"
+		class="com.zane.generic.handler.output.AutoSuggestJSONOutputter"
+		scope="singleton" />
+		
+	 
+
+
+</beans>

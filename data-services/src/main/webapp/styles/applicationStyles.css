@@ -1,0 +1,39 @@
+body{
+	background-color: #ffffff;
+}
+
+table th {
+	width: 150px;
+}
+
+table th#idColumn {
+	width: 10%;
+}
+
+table th#nameColumn {
+	width: 10%;
+}
+
+table th#expressionColumn {
+	width: 60%;
+}
+
+table th#categoryTypeColumn {
+	width: 10%;
+}
+
+table th#actionsColumn {
+	width: 10%;
+}
+
+.actionsColumnTD {
+	text-align: center;
+}
+
+table td {
+	vertical-align: top;
+}
+
+.otherRowColor {
+	background-color: #F3F7FF;
+}

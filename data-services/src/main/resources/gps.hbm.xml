@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+  <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+ 
+  <hibernate-mapping>
+
+   <class name="com.zane.generic.obj.PersistenceItem" table="GENERIC_PERSISTENCE_STORE">
+      <id name="gpsId" column="GPS_ID"/> 
+
+	  <property name="applicationId" column="APPLICATION_ID" />	  
+	  <property name="userId" column="USER_ID" />
+	  <property name="key" column="DATA_KEY" />
+	  <property name="nameSpace" column="NAMESPACE" />
+	  <property name="value" column="DATA_VALUE" />
+	  <property name="creationDate" column="CREATION_DATE" />
+	  <property name="lastModified" column="LAST_MODIFIED" />
+	  <property name="lastAccessed" column="LAST_ACCESSED" />
+	  
+   </class>
+   
+   <class name="com.zane.generic.obj.RadarPortfolio" table="UNV_PORTFOLIO">
+      <id name="portfolioId" column="PORTFOLIO_ID"/> 
+
+	  <property name="portfolioName" column="PORTFOLIO_NAME" />	  
+	  <property name="userId" column="OWNER_ID" />
+	  <property name="ticker" column="TICKER" />
+	  <property name="visible" column="VISIBLE" />
+	  <property name="shared" column="IS_SHARED" />
+	  <property name="creationDate" column="CREATION_DATE" />
+	  <property name="lastModified" column="LAST_MODIFIED" />
+	  <property name="lastAccessed" column="LAST_ACCESSED" />
+	  
+   </class>   
+    
+</hibernate-mapping>
