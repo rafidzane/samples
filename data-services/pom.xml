@@ -19,6 +19,8 @@
 				<configuration>
 					<path>/ds</path>
 					<port>7001</port>
+		            <source>1.7</source>
+		            <target>1.7</target>
 				</configuration>
 			</plugin>
 		</plugins>

@@ -6,19 +6,18 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
 
 public class CustomClassPathContext extends FileSystemXmlApplicationContext {
-@SuppressWarnings("unchecked")
- 
+	@SuppressWarnings("unchecked")
 
-public CustomClassPathContext(String s) throws BeansException {
-super(s);
-}
+	public CustomClassPathContext(String s) throws BeansException {
+		super(s);
+	}
 
-public CustomClassPathContext(String[] s) throws BeansException {
-super(s);
-}
+	public CustomClassPathContext(String[] s) throws BeansException {
+		super(s);
+	}
 
-protected void initBeanDefinitionReader(XmlBeanDefinitionReader beanDefinitionReader) {
-beanDefinitionReader.setValidationMode(XmlBeanDefinitionReader.VALIDATION_NONE);
-beanDefinitionReader.setNamespaceAware(true);
-}
+	protected void initBeanDefinitionReader(XmlBeanDefinitionReader beanDefinitionReader) {
+		beanDefinitionReader.setValidationMode(XmlBeanDefinitionReader.VALIDATION_NONE);
+		beanDefinitionReader.setNamespaceAware(true);
+	}
 }
