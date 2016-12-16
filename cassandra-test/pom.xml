@@ -56,4 +56,5 @@
 
 
 	</dependencies>
+	<name>cassandra</name>
 </project>
