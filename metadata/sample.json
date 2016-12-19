@@ -1,0 +1,91 @@
+{
+  "versionHashCode": "DF_580024961",
+  "processes": [
+    {
+      "sources": [
+        {
+          "dataZone": {
+            "name": "ICDW Oracle Dev",
+            "connector": {
+              "name": "Oracle Connector",
+              "vendor": "Oracle 11g"
+            },
+            "authentication": {
+              "scheme": "EPV"
+            }
+          },
+          "fields": [
+            {
+              "name": "F0",
+              "dataType": "STRING",
+              "position": "0",
+              "pi": {
+                "piCode": "SSN",
+                "piDefinition": "Social Security Number"
+              }
+            },
+            {
+              "name": "F1",
+              "dataType": "STRING",
+              "position": "1",
+              "pi": {
+                "piCode": "SSN",
+                "piDefinition": "Social Security Number"
+              }
+            },
+            {
+              "name": "F2",
+              "dataType": "STRING",
+              "position": "2",
+              "pi": {
+                "piCode": "SSN",
+                "piDefinition": "Social Security Number"
+              }
+            }
+          ],
+          "name": "MSP Loan",
+          "code": "MSP156.LOAN"
+        }
+      ],
+      "destinations": [
+        {
+          "fields": [
+            {
+              "name": "F0",
+              "dataType": "STRING",
+              "position": "0",
+              "pi": {
+                "piCode": "SSN",
+                "piDefinition": "Social Security Number"
+              }
+            },
+            {
+              "name": "F1",
+              "dataType": "STRING",
+              "position": "1",
+              "pi": {
+                "piCode": "SSN",
+                "piDefinition": "Social Security Number"
+              }
+            },
+            {
+              "name": "F2",
+              "dataType": "STRING",
+              "position": "2",
+              "pi": {
+                "piCode": "SSN",
+                "piDefinition": "Social Security Number"
+              }
+            }
+          ],
+          "name": "MSP Loan",
+          "code": "MSP156.LOAN"
+        }
+      ],
+      "processorName": "VLS Move A to B"
+    }
+  ],
+  "name": "VLS DataMovement",
+  "code": "VLS",
+  "effectiveStartDate": "2016-12-18 20:02:12.357 EST"
+}
